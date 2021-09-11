@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Area Calculator</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <h1 class="nav-heading">Fun With Triangles!</h1>
+      <div class="nav-list">
+        <ul class="list-non-bullet">
+          <li class="list-item">
+            <a href="/index.html" class="nav-link">Triangle Quiz</a>
+          </li>
+          <li class="list-item">
+            <a href="/pages/istriangle.html" class="nav-link">Is Traingle?</a>
+          </li>
+          <li class="list-item">
+            <a href="/pages/hypotenuse.html" class="nav-link">Hypotenuse</a>
+          </li>
+          <li class="list-item">
+            <a href="/pages/areacalculator.html" class="nav-link selected"
+              >Area</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Area Calculator</h1>
+      <div class="button-container">
+        <button id="area-calc-one">Calculate Area: Method 1</button>
+        <button id="area-calc-two">Calculate Area: Method 2</button>
+      </div>
+      <div class="calc-methods methods-one">
+        <div class="message">
+          Fun Fact: Area of a right angled triangle can be found using the
+          equation &half;(base*height)
+        </div>
+        <label for="side-base">Enter the base value (b)</label>
+        <input type="number" class="input-side-1" id="side-base" />
+        <label for="side-height">Enter the height value (h)</label>
+        <input type="number" class="input-side-1" id="side-height" />
+        <button id="btn-calc-area-method-1">Calculate Area</button>
+      </div>
+      <div class="calc-methods methods-two">
+        <div class="message">
+          Fun Fact: Heron's Formula to find the area of triangle: &Sqrt;(s (s-a)
+          (s-b) (s-c)) where s = (a + b + c) / 2
+        </div>
+        <label for="side-one">Enter the first side of triangle (a)</label>
+        <input type="number" class="input-side-2" id="side-one" />
+        <label for="side-two">Enter the second side of triangle (b)</label>
+        <input type="number" class="input-side-2" id="side-two" />
+        <label for="side-three">Enter the third side of triangle (c)</label>
+        <input type="number" class="input-side-2" id="side-three" />
+        <button id="btn-calc-area-method-2">Calculate Area</button>
+      </div>
+      <div class="output"></div>
+    </div>
+    <footer class="footer">
+      <h3 class="title-footer">
+        Created using HTML CSS & JavaScript | 2021 | &copy; Jeffrin Mathew Benny
+      </h3>
+
+      <ul class="social">
+        <li class="list-item">
+          <a href="https://jeffrinmb.netlify.app" class="social-link"
+            ><img src="/image/user.png" alt="PortFolio" class="link-image"
+          /></a>
+        </li>
+        <li class="list-item">
+          <a href="https://github.com/jeffrinmb" class="social-link"
+            ><img src="/image/github.png" alt="GitHub" class="link-image"
+          /></a>
+        </li>
+        <li class="list-item">
+          <a
+            href="https://www.linkedin.com/in/jeffrin-mathew-benny-5819bb148"
+            class="social-link"
+            ><img src="/image/linkedin.png" alt="LinkedIn" class="link-image"
+          /></a>
+        </li>
+        <li class="list-item">
+          <a href="https://twitter.com/jeffrin_mb" class="social-link"
+            ><img src="/image/twitter.png" alt="Twitter" class="link-image"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="/scripts/areacalculator.js"></script>
+  </body>
+</html>
