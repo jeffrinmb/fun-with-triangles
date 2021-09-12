@@ -10,8 +10,14 @@ const divMethodOne = document.querySelector('.methods-one');
 const divMethodTwo = document.querySelector('.methods-two');
 const outputMessage = document.querySelector('.output');
 
-divMethodOne.style.display = 'none';
-divMethodTwo.style.display = 'none';
+const initialLoad = () => {
+  divMethodOne.style.display = 'none';
+  divMethodTwo.style.display = 'none';
+  btnMethodOne.style.color = '#5b21b6';
+  btnMethodOne.style.backgroundColor = 'white';
+  btnMethodTwo.style.color = '#5b21b6';
+  btnMethodTwo.style.backgroundColor = 'white';
+};
 
 const displayMessage = message => {
   outputMessage.innerText = message;
@@ -33,16 +39,32 @@ const validateFn = elements => {
   return true;
 };
 
+initialLoad();
+
 btnMethodOne.addEventListener('click', () => {
   displayMessage('');
   divMethodOne.style.display = 'block';
   divMethodTwo.style.display = 'none';
+  btnMethodOne.style.color = 'white';
+  btnMethodOne.style.backgroundColor = '#5b21b6';
+  btnMethodTwo.style.color = '#5b21b6';
+  btnMethodTwo.style.backgroundColor = 'white';
+  for (const side of sidesTwo) {
+    side.value = '';
+  }
 });
 
 btnMethodTwo.addEventListener('click', () => {
   displayMessage('');
   divMethodOne.style.display = 'none';
   divMethodTwo.style.display = 'block';
+  btnMethodOne.style.color = '#5b21b6';
+  btnMethodOne.style.backgroundColor = 'white';
+  btnMethodTwo.style.color = 'white';
+  btnMethodTwo.style.backgroundColor = '#5b21b6';
+  for (const side of sidesOne) {
+    side.value = '';
+  }
 });
 
 btnCalcOne.addEventListener('click', () => {
