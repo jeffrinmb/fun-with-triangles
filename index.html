@@ -29,7 +29,117 @@
     </nav>
     <div class="container">
       <h1>Triangle Quiz</h1>
-
+      <form class="quiz-form">
+        <div class="question-container">
+          <p>This type of triangle has one 90 degree angle.</p>
+          <label
+            ><input
+              type="radio"
+              name="question-one"
+              value="Acute"
+            />Acute</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-one"
+              value="Right"
+            />Right</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-one"
+              value="Obtuse"
+            />Obtuse</label
+          >
+        </div>
+        <div class="question-container">
+          <p>
+            The sides of a triangle are 7, 10, and 12. Find the length of the
+            longest side of a similar triangle whose shortest side is 21.
+          </p>
+          <label><input type="radio" name="question-two" value="30" />30</label>
+          <label><input type="radio" name="question-two" value="21" />21</label>
+          <label><input type="radio" name="question-two" value="36" />36</label>
+        </div>
+        <div class="question-container">
+          <p>Which of the following triangles are always similar?</p>
+          <label
+            ><input
+              type="radio"
+              name="question-three"
+              value="Right Triangle"
+            />Right Triangle</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-three"
+              value="Equilateral Triangle"
+            />Equilateral Triangle</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-three"
+              value="Isoceles Triangle"
+            />Isoceles Triangle</label
+          >
+        </div>
+        <div class="question-container">
+          <p>What is true of angles of similar triangles?</p>
+          <label
+            ><input
+              type="radio"
+              name="question-four"
+              value="Opposite angles are congruent"
+            />Opposite angles are congruent</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-four"
+              value="Corresponding angles are congurent"
+            />Corresponding angles are congurent</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-four"
+              value="Corresponding angles are 90 degrees"
+            />Corresponding angles are 90 degrees</label
+          >
+        </div>
+        <div class="question-container">
+          <p>In right triangle, the side opposite to right angle is called:</p>
+          <label
+            ><input
+              type="radio"
+              name="question-five"
+              value="Altitude"
+            />Altitude</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-five"
+              value="Hypotenuse"
+            />Hypotenuse</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="question-five"
+              value="Angle Bisector"
+            />Angle Bisector</label
+          >
+        </div>
+        <div class="quiz-btns">
+          <button type="submit" id="btn-submit">Submit</button>
+          <button type="reset" id="btn-reset">Reset</button>
+        </div>
+      </form>
       <div class="output"></div>
     </div>
     <footer class="footer">
