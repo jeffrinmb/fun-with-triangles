@@ -81,16 +81,29 @@ btnCalcOne.addEventListener('click', () => {
 btnCalcTwo.addEventListener('click', () => {
   displayMessage('');
   if (validateFn(sidesTwo)) {
-    let semiPerimeter = 0;
-    for (const side of sidesTwo) {
-      semiPerimeter += Number(side.value);
+    const sideOne = Number(sidesTwo[0].value);
+    const sideTwo = Number(sidesTwo[1].value);
+    const sideThree = Number(sidesTwo[2].value);
+    if (
+      sideOne + sideTwo > sideThree &&
+      sideTwo + sideThree > sideOne &&
+      sideOne + sideThree > sideTwo
+    ) {
+      let semiPerimeter = 0;
+      for (const side of sidesTwo) {
+        semiPerimeter += Number(side.value);
+      }
+      semiPerimeter /= 2;
+      let area = semiPerimeter;
+      for (const side of sidesTwo) {
+        area *= semiPerimeter - Number(side.value);
+      }
+      area = Math.sqrt(area);
+      displayMessage(`The area of triangle is ${area.toPrecision(3)}`);
+    } else {
+      displayMessage(
+        "The sides won't create a triangle. For a triangle, the sum of two sides should be greater than the third side."
+      );
     }
-    semiPerimeter /= 2;
-    let area = semiPerimeter;
-    for (const side of sidesTwo) {
-      area *= semiPerimeter - Number(side.value);
-    }
-    area = Math.sqrt(area);
-    displayMessage(`The area of triangle is ${area.toPrecision(3)}`);
   }
 });
